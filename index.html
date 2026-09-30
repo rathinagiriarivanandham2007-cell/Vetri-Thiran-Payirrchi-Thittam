@@ -1,77 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PocketSmart AI</title>
-<link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PocketSmart AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <div class="brand">Pocket<span>Smart</span> AI</div>
-  <nav><a href="#planners">Planners</a><a href="#how">How it works</a></nav>
-</header>
+  <header>
+    <div class="logo">PocketSmart <span>AI</span></div>
+    <p>Your Smart Budget & Recommendation Assistant</p>
+  </header>
 
-<main>
-<section class="hero">
-  <div>
-    <p class="eyebrow">GENAI BUDGET ASSISTANT</p>
-    <h1>Plan smarter.<br><span>Spend better.</span></h1>
-    <p class="lead">Personalized budget plans and recommendations for your home, parties and special occasions.</p>
-    <a class="primary" href="#planners">Start Planning</a>
-  </div>
-  <div class="hero-card">
-    <div class="mini-label">YOUR SMART BUDGET</div>
-    <div class="money">₹50,000</div>
-    <div class="bar"><i style="width:72%"></i></div>
-    <div class="split"><span>Planned</span><b>₹36,000</b></div>
-    <div class="split"><span>Remaining</span><b>₹14,000</b></div>
-  </div>
-</section>
+  <main>
+    <section class="hero">
+      <h1>Spend Smart. Choose Better.</h1>
+      <p>Tell PocketSmart AI your budget and needs. Get simple, budget-aware recommendations.</p>
+    </section>
 
-<section id="planners" class="section">
-  <div class="section-head">
-    <p class="eyebrow">CHOOSE A PLANNER</p>
-    <h2>What are you planning?</h2>
-  </div>
-  <div class="cards">
-    <button class="planner active" data-type="home"><span>🏠</span><b>Home Interior</b><small>Rooms, furniture, lighting & more</small></button>
-    <button class="planner" data-type="party"><span>🎉</span><b>Party Planner</b><small>Catering, decoration & event needs</small></button>
-    <button class="planner" data-type="jewelry"><span>💎</span><b>Jewelry Planner</b><small>Occasion, style & outfit matching</small></button>
-  </div>
+    <section class="card">
+      <h2>Get Your Recommendation</h2>
 
-  <div class="planner-box">
-    <div class="form">
-      <h3 id="formTitle">Home Interior Planner</h3>
-      <label>Budget (₹)<input id="budget" type="number" min="1" value="25000"></label>
-      <div id="dynamic"></div>
-      <button id="generate" class="primary full">✨ Generate Smart Plan</button>
-    </div>
-    <div class="preview">
-      <div class="preview-icon">✦</div>
-      <h3>AI-powered recommendations</h3>
-      <p>Tell PocketSmart your budget and needs. The engine balances cost, style and practical requirements.</p>
-      <div class="chips"><span>Budget-aware</span><span>Personalized</span><span>Cross-category</span></div>
-    </div>
-  </div>
-</section>
+      <form id="recommendForm">
+        <label>Budget (₹)</label>
+        <input id="budget" type="number" min="1" placeholder="Example: 50000" required>
 
-<section id="results" class="section hidden">
-  <div class="section-head"><p class="eyebrow">YOUR PLAN</p><h2>Smart recommendations</h2></div>
-  <div id="resultBox"></div>
-</section>
+        <label>Category</label>
+        <input id="category" type="text" placeholder="Example: Smartphone" required>
 
-<section id="how" class="section how">
-  <div><p class="eyebrow">HOW IT WORKS</p><h2>From budget to plan in three steps.</h2></div>
-  <div class="steps">
-    <div><b>01</b><h3>Set your budget</h3><p>Enter the amount you are comfortable spending.</p></div>
-    <div><b>02</b><h3>Tell us what you need</h3><p>Choose your planner and add your preferences.</p></div>
-    <div><b>03</b><h3>Get a smart plan</h3><p>Receive an AI-generated allocation and recommendation list.</p></div>
-  </div>
-</section>
-</main>
+        <label>Preference</label>
+        <input id="preference" type="text" placeholder="Example: Camera, battery and performance">
 
-<footer>PocketSmart AI · GenAI Budget & Recommendation Assistant</footer>
-<script src="/static/app.js"></script>
+        <label>Goal</label>
+        <textarea id="goal" placeholder="Example: I want the best phone for college and coding"></textarea>
+
+        <button type="submit">Get Smart Recommendations</button>
+      </form>
+    </section>
+
+    <section id="result" class="result hidden"></section>
+  </main>
+
+  <footer>© 2026 PocketSmart AI</footer>
+  <script src="app.js"></script>
 </body>
 </html>
